@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Testing Floricultivo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-card style="text-align: center">
+      <ion-card-header>
+        <ion-card-title>Temperatura °C</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <br/>
+        <h1>{{ temp }}°</h1>
+        <ion-button color="warning" fill="outline" (click)="getTemp()">
+          Solicitar temperatura
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  
+  <br/>
+  <ion-text [color]="led ? 'success' : 'danger'">
+    <h1 style="text-align: center">{{ tittle }}</h1>
+  </ion-text>
+
+
+  <div>
+    <ion-button color="success" expand="block" shape="round" (click)="ledOn()">Ventilador ON</ion-button>
+    <ion-button color="danger" expand="block" shape="round" (click)="ledOff()">Ventilador OFF</ion-button>
+  </div>
+
+</ion-content>
